@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Link from "next/Link";
+import NextLink from "next/link";
 import { Brightness6Rounded } from "@material-ui/icons";
 import styles from "./Layout.module.css";
 import { useEffect, useState } from "react";
@@ -36,7 +36,7 @@ const Layout = ({ children, title = "World Ranks" }) => {
       </Head>
 
       <header className={styles.header}>
-        <Link href="/">
+        <NextLink href="/">
           <span
             style={{
               fontSize: "20px",
@@ -46,7 +46,7 @@ const Layout = ({ children, title = "World Ranks" }) => {
           >
             World Ranks
           </span>
-        </Link>
+        </NextLink>
         <button className={styles.themeSwitcher} onClick={switchTheme}>
           <Brightness6Rounded />
         </button>
